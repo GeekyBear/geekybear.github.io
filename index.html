@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full.Support | Técnico PC Rosario — Ezequiel Sánchez</title>
+<meta name="description" content="Técnico IT con +15 años de experiencia en Rosario. Ex Deloitte, Juleriaque y Metalsur. Formateo, virus, reparación de notebooks y PCs. A domicilio. Diagnóstico sin cargo.">
+<meta name="keywords" content="técnico PC Rosario, reparación computadora Rosario, formateo PC Rosario, técnico notebook Rosario, servicio técnico computadoras Rosario, eliminar virus computadora Rosario">
+<meta name="author" content="Ezequiel Sánchez">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F4EFE6;
+  --cream2: #EDE7DA;
+  --cream3: #E2DAC9;
+  --ink: #1A1612;
+  --ink2: #3D342A;
+  --ink3: #6B5C4E;
+  --orange: #C4622D;
+  --orange2: #A84E22;
+  --orange-light: #F0D5C4;
+  --rule: rgba(26,22,18,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* GRAIN TEXTURE */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--cream);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 40px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-logo em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink3);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 56px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-main {
+  padding: 80px 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  align-items: end;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 32px;
+}
+
+.hero-badge::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--orange);
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--orange);
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--ink3);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.hero-sub strong { color: var(--ink); font-weight: 600; }
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 14px 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--orange);
+}
+
+.btn-ghost {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink3);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink3);
+  padding-bottom: 2px;
+  transition: all 0.15s;
+}
+
+.btn-ghost:hover { color: var(--orange); border-color: var(--orange); }
+
+/* HERO SIDEBAR */
+.hero-sidebar {
+  padding-bottom: 8px;
+}
+
+.sidebar-block {
+  border-top: 1px solid var(--rule);
+  padding: 20px 0;
+}
+
+.sidebar-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 8px;
+}
+
+.sidebar-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.sidebar-value.orange { color: var(--orange); }
+.sidebar-sub { font-size: 13px; color: var(--ink3); margin-top: 4px; }
+
+/* MARQUEE */
+.marquee-wrap {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--ink);
+  overflow: hidden;
+  padding: 14px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream2);
+  padding: 0 40px;
+  white-space: nowrap;
+}
+
+.marquee-item span {
+  color: var(--orange);
+  margin-right: 40px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* SECTION */
+section { padding: 100px 0; }
+
+.section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 64px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: 0.1em;
+  padding-top: 8px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--orange);
+}
+
+/* SERVICIOS */
+#servicios { background: var(--cream2); }
+
+.servicios-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.servicios-table tr {
+  border-top: 1px solid var(--rule);
+  transition: background 0.15s;
+  cursor: default;
+}
+
+.servicios-table tr:last-child { border-bottom: 1px solid var(--rule); }
+.servicios-table tr:hover { background: var(--cream3); }
+
+.servicios-table td {
+  padding: 28px 16px;
+  vertical-align: top;
+}
+
+.td-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: 0.1em;
+  width: 48px;
+  padding-top: 32px;
+}
+
+.td-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  color: var(--ink);
+  width: 30%;
+}
+
+.td-desc {
+  font-size: 14px;
+  color: var(--ink3);
+  line-height: 1.65;
+  padding-top: 6px;
+}
+
+.td-price {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--orange);
+  text-align: right;
+  white-space: nowrap;
+  padding-top: 6px;
+}
+
+.td-price.free {
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* EMERGENCIA BANNER */
+.emergencia-banner {
+  margin-top: 1px;
+  background: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 48px;
+  gap: 40px;
+}
+
+.emergencia-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.emergencia-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.emergencia-desc {
+  font-size: 14px;
+  color: rgba(244,239,230,0.5);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.emergencia-btn {
+  display: inline-block;
+  flex-shrink: 0;
+  background: var(--orange);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.emergencia-btn:hover { background: var(--orange2); }
+
+@media (max-width: 768px) {
+  .emergencia-banner { flex-direction: column; padding: 32px 20px; align-items: flex-start; }
+  .emergencia-btn { width: 100%; text-align: center; }
+}
+
+/* TRAYECTORIA */
+#trayectoria { background: var(--ink); }
+#trayectoria .section-title { color: var(--cream); }
+#trayectoria .section-num { color: var(--ink3); }
+#trayectoria .section-header { border-bottom-color: rgba(255,255,255,0.08); }
+
+.tray-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.tray-cell {
+  background: var(--ink);
+  padding: 40px;
+  transition: background 0.2s;
+}
+
+.tray-cell:hover { background: var(--ink2); }
+
+.tray-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.tray-company {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.tray-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.tray-desc {
+  font-size: 14px;
+  color: rgba(244,239,230,0.55);
+  line-height: 1.7;
+}
+
+.tray-desc strong {
+  color: rgba(244,239,230,0.85);
+  font-weight: 600;
+}
+
+.tray-tag {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--orange2);
+  padding: 4px 10px;
+}
+
+/* POR QUÉ */
+.porque-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+}
+
+.porque-cell {
+  background: var(--cream);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.porque-cell::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -10px;
+  right: 24px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 120px;
+  color: var(--cream2);
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.porque-cell:hover::before { color: var(--orange-light); }
+
+.porque-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.porque-desc {
+  font-size: 14px;
+  color: var(--ink3);
+  line-height: 1.7;
+  max-width: 320px;
+  position: relative;
+}
+
+/* CONTACTO */
+#contacto { background: var(--cream2); }
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contacto-info .big-tel {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.contacto-info p {
+  font-size: 15px;
+  color: var(--ink3);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.contacto-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contacto-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+}
+
+.contacto-row:last-child { border-bottom: 1px solid var(--rule); }
+.contacto-row .lbl { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink3); letter-spacing: 0.1em; text-transform: uppercase; padding-top: 2px; }
+.contacto-row .val { font-weight: 600; color: var(--ink); text-align: right; }
+.contacto-row .val.accent { color: var(--orange); }
+
+.wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--ink);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  margin-bottom: 16px;
+  transition: background 0.2s;
+  width: 100%;
+  justify-content: center;
+}
+
+.wa-btn:hover { background: var(--orange); }
+
+.wa-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.wa-note em { color: var(--orange); font-style: normal; }
+
+.horarios-block {
+  margin-top: 40px;
+}
+
+.horarios-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 16px;
+}
+
+.horario-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+}
+
+.horario-row:last-child { border-bottom: 1px solid var(--rule); }
+.horario-row .dia { color: var(--ink3); }
+.horario-row .hora { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--ink); }
+.horario-row .hora.accent { color: var(--orange); }
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: rgba(244,239,230,0.4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-logo em { color: var(--orange); font-style: normal; }
+
+.footer-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: rgba(244,239,230,0.25);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* FLOATING WA */
+.floating-wa {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  background: #25D366;
+  color: #fff;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-wa:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge { animation: fadeUp 0.5s ease both; }
+.hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
+.hero-sub { animation: fadeUp 0.5s 0.2s ease both; }
+.hero-ctas { animation: fadeUp 0.5s 0.3s ease both; }
+.hero-sidebar { animation: fadeUp 0.5s 0.35s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero-main { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px 40px; }
+  .hero-sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .sidebar-block { border-top: none; border-left: 1px solid var(--rule); padding: 0 20px; }
+  .sidebar-block:first-child { border-left: none; padding-left: 0; }
+  .sidebar-value { font-size: 28px; }
+  .container { padding: 0 20px; }
+  section { padding: 72px 0; }
+  .section-header { grid-template-columns: 1fr; gap: 8px; }
+  .servicios-table td { padding: 20px 8px; }
+  .td-name { font-size: 20px; width: auto; }
+  .td-num { display: none; }
+  .tray-grid { grid-template-columns: 1fr; }
+  .porque-grid { grid-template-columns: 1fr; }
+  .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Full<em>.</em>Support</div>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#porque">¿Por qué yo?</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-main">
+    <div class="hero-left">
+      <div class="hero-badge">Técnico IT · Rosario, Santa Fe</div>
+      <h1>Tu compu<br>rota,<br><em>yo la<br>arreglo.</em></h1>
+      <p class="hero-sub">
+        Técnico IT con más de <strong>15 años de experiencia</strong> en Rosario —
+        incluyendo soporte corporativo en Deloitte, Juleriaque y Metalsur.
+        Retiro tu equipo o <strong>voy a domicilio</strong>.
+        Diagnóstico <strong>sin cargo</strong>.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5493416022238?text=Hola%20Ezequiel%2C%20necesito%20ayuda%20con%20mi%20PC" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Consultame ahora
+        </a>
+        <a href="#servicios" class="btn-ghost">Ver precios →</a>
+      </div>
+    </div>
+    <div class="hero-sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-label">Años de exp.</div>
+        <div class="sidebar-value orange">+15</div>
+        <div class="sidebar-sub">En IT y soporte</div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-label">Diagnóstico</div>
+        <div class="sidebar-value">$0</div>
+        <div class="sidebar-sub">Sin cargo siempre</div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-label">Respuesta</div>
+        <div class="sidebar-value">24hs</div>
+        <div class="sidebar-sub">Máximo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>✦</span> Formateo completo</div>
+      <div class="marquee-item"><span>✦</span> Eliminación de virus</div>
+      <div class="marquee-item"><span>✦</span> Reparación de hardware</div>
+      <div class="marquee-item"><span>✦</span> PC lenta — optimización</div>
+      <div class="marquee-item"><span>✦</span> Instalación de programas</div>
+      <div class="marquee-item"><span>✦</span> Diagnóstico sin cargo</div>
+      <div class="marquee-item"><span>✦</span> A domicilio en Rosario</div>
+      <div class="marquee-item"><span>✦</span> Formateo completo</div>
+      <div class="marquee-item"><span>✦</span> Eliminación de virus</div>
+      <div class="marquee-item"><span>✦</span> Reparación de hardware</div>
+      <div class="marquee-item"><span>✦</span> PC lenta — optimización</div>
+      <div class="marquee-item"><span>✦</span> Instalación de programas</div>
+      <div class="marquee-item"><span>✦</span> Diagnóstico sin cargo</div>
+      <div class="marquee-item"><span>✦</span> A domicilio en Rosario</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <h2 class="section-title">¿Qué problema<br>tenés con tu <em>PC?</em></h2>
+    </div>
+
+    <table class="servicios-table">
+      <tbody>
+        <tr>
+          <td class="td-num">01</td>
+          <td class="td-name">Formateo<br>completo</td>
+          <td class="td-desc">Reinstalación de Windows limpia, todos los drivers y actualizaciones. Tu compu como nueva.</td>
+          <td class="td-price">$70.000 — $90.000</td>
+        </tr>
+        <tr>
+          <td class="td-num">02</td>
+          <td class="td-name">Formateo<br>+ programas</td>
+          <td class="td-desc">Todo lo anterior más Office, antivirus y los programas que necesitás instalados y activados.</td>
+          <td class="td-price">$90.000 — $120.000</td>
+        </tr>
+        <tr>
+          <td class="td-num">03</td>
+          <td class="td-name">Eliminación<br>de virus</td>
+          <td class="td-desc">Limpieza profunda de malware, adware y spyware. Optimización general del sistema.</td>
+          <td class="td-price">$50.000 — $70.000</td>
+        </tr>
+        <tr>
+          <td class="td-num">04</td>
+          <td class="td-name">Reparación<br>de hardware</td>
+          <td class="td-desc">Pantallas, teclados, puertos, memoria RAM, disco rígido o SSD. Presupuesto previo siempre.</td>
+          <td class="td-price">Presupuesto según caso</td>
+        </tr>
+        <tr>
+          <td class="td-num">05</td>
+          <td class="td-name">PC lenta /<br>optimización</td>
+          <td class="td-desc">Limpieza, liberación de espacio, inicio rápido, optimización de RAM. Sin formatear si no hace falta.</td>
+          <td class="td-price">$40.000 — $60.000</td>
+        </tr>
+        <tr>
+          <td class="td-num">06</td>
+          <td class="td-name">Visita a<br>domicilio</td>
+          <td class="td-desc">Voy a tu casa en Rosario. El costo se descuenta del trabajo si avanzamos. Preferentemente recibo equipos en casa, pero me muevo si lo necesitás.</td>
+          <td class="td-price">$20.000</td>
+        </tr>
+        <tr>
+          <td class="td-num">07</td>
+          <td class="td-name">Diagnóstico</td>
+          <td class="td-desc">No sabés qué tiene tu compu. Revisión completa sin costo. Solo pagás si decidís avanzar.</td>
+          <td class="td-price free">Sin cargo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="emergencia-banner">
+      <div class="emergencia-left">
+        <div class="emergencia-eyebrow">Servicio fuera de horario</div>
+        <div class="emergencia-title">¿Emergencia nocturna?</div>
+        <div class="emergencia-desc">¿Tenés una presentación mañana y la PC no arranca? Escribime aunque sea tarde. Atención urgente disponible a cualquier hora — el precio se acuerda según la urgencia.</div>
+      </div>
+      <a href="https://wa.me/5493416022238?text=Hola%20Ezequiel%2C%20tengo%20una%20urgencia%20con%20mi%20PC" target="_blank" rel="noopener" class="emergencia-btn">
+        Escribime ahora →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section id="trayectoria">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" style="color:rgba(244,239,230,0.25)">02</div>
+      <h2 class="section-title">No soy un técnico<br>de <em style="color:var(--orange)">fin de semana.</em></h2>
+    </div>
+
+    <div class="tray-grid">
+      <div class="tray-cell">
+        <div class="tray-period">2019 — 2022</div>
+        <div class="tray-company">Juleriaque</div>
+        <div class="tray-role">Analista de Soporte IT Sr. · Rosario</div>
+        <div class="tray-desc">Responsable de toda la infraestructura informática. Coordinación de mantenimiento preventivo para <strong>40 sucursales</strong>. Gestión de proveedores, stock y Active Directory.</div>
+        <div class="tray-tag">3 años</div>
+      </div>
+      <div class="tray-cell">
+        <div class="tray-period">2016 — 2018</div>
+        <div class="tray-company">Deloitte<br>Argentina</div>
+        <div class="tray-role">Encargado de Sistemas · Rosario</div>
+        <div class="tray-desc">A cargo del departamento de sistemas. Servidores, backups, Help Desk local y remoto. Certificación <strong>ISO 27001</strong>.</div>
+        <div class="tray-tag">ISO 27001</div>
+      </div>
+      <div class="tray-cell">
+        <div class="tray-period">2018 — 2019</div>
+        <div class="tray-company">Metalsur</div>
+        <div class="tray-role">Analista de Soporte IT · V. G. Gálvez</div>
+        <div class="tray-desc">Soporte nivel 1 y 2. Instalación y configuración de sistemas operativos, redes, switches y routers.</div>
+        <div class="tray-tag">Redes & SO</div>
+      </div>
+      <div class="tray-cell">
+        <div class="tray-period">2010 — 2015</div>
+        <div class="tray-company">Freelance<br>Independiente</div>
+        <div class="tray-role">Técnico IT · Rosario</div>
+        <div class="tray-desc">Reparación, armado, venta y soporte de software. Mantenimiento para <strong>empresas y hogares</strong>, redes y sistemas operativos.</div>
+        <div class="tray-tag">5 años</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section id="porque">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <h2 class="section-title">Sin vueltas.<br><em>Sin sorpresas.</em></h2>
+    </div>
+
+    <div class="porque-grid">
+      <div class="porque-cell" data-num="1">
+        <div class="porque-title">Experiencia corporativa real</div>
+        <div class="porque-desc">Trabajé en Deloitte, Juleriaque y Metalsur. Sé lo que significa mantener sistemas que no pueden fallar.</div>
+      </div>
+      <div class="porque-cell" data-num="2">
+        <div class="porque-title">Voy a tu casa</div>
+        <div class="porque-desc">No tenés que trasladar nada. Trabajo en tu domicilio o retiro el equipo con fecha exacta de entrega.</div>
+      </div>
+      <div class="porque-cell" data-num="3">
+        <div class="porque-title">Precio antes de arrancar</div>
+        <div class="porque-desc">Te digo exactamente cuánto sale antes de tocar nada. Ninguna sorpresa al final del trabajo.</div>
+      </div>
+      <div class="porque-cell" data-num="4">
+        <div class="porque-title">Te explico qué pasó</div>
+        <div class="porque-desc">Al terminar te cuento qué tenía tu equipo y cómo evitarlo. En palabras simples, sin tecnicismos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <h2 class="section-title">¿Hablamos<br>sobre tu <em>PC?</em></h2>
+    </div>
+
+    <div class="contacto-grid">
+      <div class="contacto-info">
+        <div class="big-tel">341 602-2238</div>
+        <p>Escribime por WhatsApp, contame qué pasa y te respondo con un presupuesto claro. El diagnóstico no te cuesta nada.</p>
+
+        <div class="contacto-data">
+          <div class="contacto-row">
+            <span class="lbl">WhatsApp</span>
+            <span class="val">341 602-2238</span>
+          </div>
+          <div class="contacto-row">
+            <span class="lbl">Zona</span>
+            <span class="val">Rosario y alrededores</span>
+          </div>
+          <div class="contacto-row">
+            <span class="lbl">Email</span>
+            <span class="val">ezedsanchez@outlook.com</span>
+          </div>
+        </div>
+
+        <div class="horarios-block">
+          <div class="horarios-title">Horarios de atención</div>
+          <div class="horario-row">
+            <span class="dia">Lunes a viernes</span>
+            <span class="hora">08:00 – 20:00</span>
+          </div>
+          <div class="horario-row">
+            <span class="dia">Sábados</span>
+            <span class="hora">08:00 – 16:00</span>
+          </div>
+          <div class="horario-row">
+            <span class="dia">Domingos</span>
+            <span class="hora accent">Solo emergencias</span>
+          </div>
+          <div class="horario-row">
+            <span class="dia">Fuera de horario</span>
+            <span class="hora accent">Emergencias disponibles</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacto-cta">
+        <a href="https://wa.me/5493416022238?text=Hola%20Ezequiel%2C%20necesito%20ayuda%20con%20mi%20PC" target="_blank" rel="noopener" class="wa-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Consultame sin cargo
+        </a>
+        <div class="wa-note">Diagnóstico <em>gratis</em> · Respuesta en menos de 24hs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Full<em>.</em>Support — Ezequiel Sánchez</div>
+  <div class="footer-copy">© 2026 · Técnico IT · Rosario, Santa Fe</div>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/5493416022238?text=Hola%20Ezequiel%2C%20necesito%20ayuda%20con%20mi%20PC" target="_blank" rel="noopener" class="floating-wa" aria-label="Contactar por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
