@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geekybear.github.io/sitemap.xml
