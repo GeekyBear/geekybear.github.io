@@ -1,4 +1,6 @@
 (function () {
+  var formLoadTime = Date.now();
+
   /* --- Hamburger menu --- */
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobile-menu');
@@ -53,6 +55,11 @@
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      // Bot checks: honeypot field filled or form submitted too fast
+      var honeypot = form.querySelector('[name="website_url"]');
+      if ((honeypot && honeypot.value) || (Date.now() - formLoadTime < 2000)) return;
+
       var btn = form.querySelector('button[type="submit"]');
       var originalText = btn.textContent;
       btn.disabled = true;
