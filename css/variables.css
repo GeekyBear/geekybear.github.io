@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+  --cream: #F4EFE6;
+  --cream2: #EDE7DA;
+  --cream3: #E2DAC9;
+  --ink: #1A1612;
+  --ink2: #3D342A;
+  --ink3: #6B5C4E;
+  --orange: #C4622D;
+  --orange2: #A84E22;
+  --orange-light: #F0D5C4;
+  --rule: rgba(26,22,18,0.12);
+
+  /* Layout */
+  --container-max: 1100px;
+  --nav-height: 56px;
+  --section-pad: 100px;
+}

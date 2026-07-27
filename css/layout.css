@@ -1,0 +1,266 @@
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__inner {
+  padding: 80px 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  align-items: end;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 32px;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.hero__title em { font-style: italic; color: var(--orange); }
+
+.hero__sub {
+  font-size: 16px;
+  color: var(--ink3);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.hero__sub strong { color: var(--ink); font-weight: 600; }
+
+.hero__ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+.hero__sidebar {
+  padding-bottom: 8px;
+  animation: fadeUp 0.5s 0.35s ease both;
+}
+
+.hero__stat { border-top: 1px solid var(--rule); padding: 20px 0; }
+
+.hero__stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 8px;
+}
+
+.hero__stat-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.hero__stat-value--orange { color: var(--orange); }
+.hero__stat-sub { font-size: 13px; color: var(--ink3); margin-top: 4px; }
+
+/* ===== SERVICES TABLE ===== */
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.services-table tr {
+  border-top: 1px solid var(--rule);
+  transition: background 0.15s;
+}
+
+.services-table tr:last-child { border-bottom: 1px solid var(--rule); }
+.services-table tr:hover { background: var(--cream3); }
+.services-table td { padding: 28px 16px; vertical-align: top; }
+
+.services-table__num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--ink3);
+  letter-spacing: 0.1em;
+  width: 48px;
+  padding-top: 32px;
+}
+
+.services-table__name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  color: var(--ink);
+  width: 28%;
+}
+
+.services-table__desc {
+  font-size: 14px;
+  color: var(--ink3);
+  line-height: 1.65;
+  padding-top: 6px;
+}
+
+.services-table__price {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--orange);
+  text-align: right;
+  white-space: nowrap;
+  padding-top: 6px;
+}
+
+.services-table__price--free {
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ===== SECTION BG VARIANTS ===== */
+.section--cream2 { background: var(--cream2); }
+.section--cream  { background: var(--cream); }
+.section--ink    { background: var(--ink); }
+
+.section--ink .section-header__title { color: var(--cream); }
+.section--ink .section-header__num { color: rgba(244,239,230,0.25); }
+.section--ink .section-header { border-bottom-color: rgba(255,255,255,0.08); }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.timeline__cell { background: var(--ink); padding: 40px; transition: background 0.2s; }
+.timeline__cell:hover { background: var(--ink2); }
+
+.timeline__period {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.timeline__company {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.timeline__role {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.timeline__desc { font-size: 14px; color: rgba(244,239,230,0.55); line-height: 1.7; }
+.timeline__desc strong { color: rgba(244,239,230,0.85); font-weight: 600; }
+
+.timeline__tag {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--orange2);
+  padding: 4px 10px;
+}
+
+/* ===== WHY GRID ===== */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+}
+
+.why-cell {
+  background: var(--cream);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-cell::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -10px; right: 24px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 120px;
+  color: var(--cream2);
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.why-cell:hover::before { color: var(--orange-light); }
+
+.why-cell__title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.why-cell__desc {
+  font-size: 14px;
+  color: var(--ink3);
+  line-height: 1.7;
+  max-width: 320px;
+  position: relative;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 20px 40px; }
+
+  .hero__sidebar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .hero__stat { border-top: none; border-left: 1px solid var(--rule); padding: 0 16px; }
+  .hero__stat:first-child { border-left: none; padding-left: 0; }
+  .hero__stat-value { font-size: 28px; }
+
+  .container { padding: 0 20px; }
+  section { padding: 72px 0; }
+  .section-header { grid-template-columns: 1fr; gap: 8px; }
+
+  .services-table { display: block; }
+  .services-table tbody { display: block; }
+  .services-table tr { display: block; padding: 20px 0; border-top: 1px solid var(--rule); }
+  .services-table tr:first-child { border-top: none; }
+  .services-table td { display: block; padding: 2px 0; }
+  .services-table__num { display: none; }
+  .services-table__name { font-size: 20px; padding-bottom: 6px; }
+  .services-table__desc { padding-bottom: 8px; }
+  .services-table__price { text-align: left; }
+
+  .timeline { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+}
