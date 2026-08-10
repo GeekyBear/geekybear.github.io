@@ -33,13 +33,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://geekybear.github.io/#person",
     "name": "Ezequiel Sánchez",
     "jobTitle": "Técnico IT Independiente",
-    "description": "Técnico IT independiente en Rosario, Santa Fe, Argentina. Más de 15 años de experiencia en soporte IT, incluyendo trabajo en Deloitte Argentina y Juleriaque. Especializado en mantenimiento, optimización y configuración de computadoras. También desarrolla páginas web.",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Full.Support",
-      "url": "https://geekybear.github.io"
+    "image": "https://geekybear.github.io/assets/photo.png",
+    "description": "Técnico IT independiente en Rosario, Santa Fe, Argentina. Más de 15 años de experiencia en soporte IT, incluyendo Encargado de Sistemas en Deloitte Argentina (certificación ISO 27001) y Analista IT Sr. en Juleriaque (gestión de 40 sucursales). Atiende a particulares y pequeñas empresas en Rosario de forma personal, sin tercerizar.",
+    "worksFor": { "@id": "https://geekybear.github.io/#business" },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "ISO 27001",
+      "credentialCategory": "Certificación de seguridad de la información",
+      "recognizedBy": { "@type": "Organization", "name": "Deloitte Argentina" }
     },
     "address": {
       "@type": "PostalAddress",
@@ -55,7 +59,11 @@
       "https://github.com/geekybear",
       "https://ezequielsanchez.dev"
     ],
-    "knowsAbout": ["Soporte IT", "Mantenimiento de PC", "Redes", "Windows", "Active Directory", "Desarrollo Web", "HTML", "CSS", "JavaScript"]
+    "knowsAbout": [
+      "Soporte IT", "Mantenimiento de PC", "Formateo de PC", "Optimización de PC",
+      "Redes", "WiFi", "Windows", "Active Directory", "ISO 27001", "Help Desk",
+      "Desarrollo Web", "HTML", "CSS", "JavaScript", "Soporte técnico Rosario"
+    ]
   }
   </script>
 </head>
@@ -220,7 +228,7 @@
         <div class="how-cell__num">05</div>
         <div class="how-cell__text">
           <strong>Horarios flexibles:</strong> Lunes a viernes desde las 18hs,
-          sábados de 8 a 16hs. Domingos solo emergencias.
+          sábados de 8 a 12hs. Domingos solo emergencias.
         </div>
       </div>
       <div class="how-cell">

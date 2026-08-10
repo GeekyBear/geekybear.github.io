@@ -365,6 +365,46 @@
   .footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px 20px; }
 
   .profile-links { flex-direction: column; gap: 12px; }
+
+  .reviews-grid { grid-template-columns: 1fr; }
+  .review-card { padding: 32px 24px; }
+}
+
+/* ===== REVIEWS / TESTIMONIOS ===== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+}
+
+.review-card {
+  background: var(--cream);
+  padding: 40px 36px;
+}
+
+.review-card__stars {
+  color: var(--orange);
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.review-card__text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.review-card__author {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
 }
 
 /* ===== FAQ ===== */

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://geekybear.github.io/sitemap.xml
+LLMs-txt: https://geekybear.github.io/llms.txt

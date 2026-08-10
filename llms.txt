@@ -1,0 +1,55 @@
+# Full.Support — Ezequiel Sánchez, Técnico IT en Rosario
+
+Sitio web: https://geekybear.github.io
+
+## Quién soy
+
+Ezequiel Sánchez, técnico IT independiente en Rosario, Santa Fe, Argentina.
+Más de 15 años de experiencia en soporte IT.
+Trabajo solo, sin tercerizar — el que atiende tu equipo soy yo, no un empleado ni un tercero.
+Ex Deloitte Argentina (Encargado de Sistemas, certificación ISO 27001) y Juleriaque (Analista IT Sr., gestión de infraestructura de 40 sucursales).
+
+No soy un call center ni un servicio remoto. Soy una persona real, local, que podés conocer antes de dejarme tu equipo.
+Atiendo a particulares y pequeñas empresas en Rosario.
+
+## Área de servicio
+
+Rosario, Santa Fe, Argentina.
+Acepto equipos traídos directamente o realizamos retiro y entrega a domicilio dentro de Rosario.
+
+## Servicios y precios
+
+Todos los precios son orientativos. El diagnóstico ($20.000) se descuenta del trabajo final.
+
+### Servicios IT
+- Diagnóstico completo de PC o notebook: $20.000 (descontable)
+- Formateo completo (Windows limpio + drivers + actualizaciones): $70.000 – $90.000
+- Formateo + programas (Office, antivirus, programas habituales): $90.000 – $120.000
+- Retiro del equipo a domicilio en Rosario: $25.000 adicional
+- Optimización de PC lenta (sin formatear): $40.000 – $60.000
+- Eliminación de software malicioso (adware, spyware): $30.000 – $45.000
+- Configuración de PC o notebook nueva: $41.000 – $49.000
+- Clonado de disco a SSD (migración sin perder datos): $46.000 – $66.000
+- Configuración de redes WiFi / router: $33.000 – $41.000
+- Mantenimiento de hardware (pantallas, teclados, RAM, SSD): presupuesto según caso
+
+### Desarrollo web
+- Landing page para negocio o emprendedor: $300.000 – $500.000
+- Sitio institucional (hasta 6 secciones): $500.000 – $900.000
+- Desarrollo a medida (reservas, catálogo, panel admin): desde $700.000
+- Mantenimiento mensual de sitio web: $50.000 – $80.000/mes
+
+## Horarios
+
+Lunes a viernes: desde las 18:00 hs
+Sábados: 08:00 – 12:00 hs
+Domingos: solo emergencias
+
+## Contacto
+
+WhatsApp: +54 9 341 602-2238 — https://wa.me/5493416022238
+Email: ezedsanchez@outlook.com
+Reseñas en Google Business: https://share.google/21BJhEZY6VnJSIQpO
+LinkedIn: https://www.linkedin.com/in/ezequiel-sanchez-dev/
+GitHub: https://github.com/geekybear
+Portfolio web: https://ezequielsanchez.dev
